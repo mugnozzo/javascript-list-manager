@@ -1,25 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Mugnozzo - List of useful tools</title>
-		<link rel="stylesheet" href="style.css">
-	</head>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mugnozzo - List of useful tools</title>
+	<link rel="stylesheet" href="style.css">
+</head>
 
-	<body>
+<body>
+	<header>
+		<h1>List of useful tools</h1>
+	</header>
 
-		<div>
-			<div class="selected-tags" id="selectedTags"></div>
-			<input type="text" id="searchInput" placeholder="Search by name, description or tags..." onkeyup="filterElements()">
-			<input type="checkbox" id="fuzzySearch" onchange="filterElements()"> Fuzzy Search
+	<div>
+		<div class="selected-tags" id="selectedTags"></div>
+		<input type="text" id="searchInput" placeholder="Search by name, description or tags..."
+			onkeyup="filterElements()" autofocus>
+		<div id="allTagsContainer" class="checkboxContainer">
+			<input type="checkbox" id="filterByTags" />
+			<label for="filterByTags">
+				<a class="button" id="showTags">Show tags</a>
+				<a class="button" id="hideTags">Hide tags</a>
+			</label>
 			<div id="allTags"></div>
+		</div>
+		<div id="results-number">
+		</div>
+		<div class="">
 			<ul id="results"></ul>
 		</div>
+	</div>
 
-		<script src="data.js"></script>
-		<script src="script.js"></script>
-	</body>
+	<footer>
+		<p>This is free software, released under GPL v3.</p>
+		<p>The code of this project is hosted on github at <a
+				href="https://github.com/mugnozzo/list-of-useful-tools"
+				target="gh_list_new">https://github.com/mugnozzo/list-of-useful-tools</a></p>
+	</footer>
+
+	<script src="data.js"></script>
+	<script src="script.js"></script>
+</body>
 
 </html>
